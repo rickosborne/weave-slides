@@ -45,7 +45,7 @@ header, footer {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0.75em 1.5em;
+    padding: 0.25em 1em;
     text-transform: capitalize;
     font-size: 100%;
     color: white;
@@ -66,8 +66,8 @@ footer div {
 }
 header address {
     border-left: thin dotted rgba(255,255,255,0.5);
-    padding: 0 1.5em;
-    margin: 0 1.5em;
+    padding: 0 1em;
+    margin: 0 1em;
     font-style: normal;
     font-variant: normal;
     text-transform: none;
@@ -81,14 +81,16 @@ header a:hover, header a:focus, footer a:hover, footer a:focus {
     color: black;
     text-shadow: 0 0 0.5em white;
     background-color: rgba(255,255,255,0.5);
-    margin: -0.75em -1.5em;
-    padding: 0.75em 1.5em;
+    margin: -0.25em -1em;
+    padding: 0.25em 1em;
 }
 article {
     padding: 0.75em 1.5em 0.75em 0.75em;
     max-width: 24em;
+    height: 100%;
     overflow: hidden;
     margin: 0 auto;
+    background-color: #336699;
 }
 #author-gplus {
     display: none;
@@ -99,31 +101,90 @@ article {
 #unit {
     visibility: hidden;
 }
+section h1, section h2, section h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,0.75);
+    text-shadow: 0 0 0.25em white;
+}
+section h1 {
+    top: 3em;
+    color: hsl(208, 60%, 30%);
+}
+section h2 {
+    bottom: 3em;
+    color: hsl(208, 60%, 40%);
+}
 /* ]]> */
 </style>
 </head>
 <body>
 <header>
     <h1>Weave</h1>
-    <address><a href="http://ricko.is/weave-slides/">ricko.is/weave-slides/</a></address>
+    <address><a href="http://ricko.is/weave-slides">ricko.is/weave-slides</a></address>
 </header>
 <article>
-<section>
-    <h1>Weave</h1>
-    <h2>Visualizing Students' Progress Toward Their Degrees</h2>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p>4</p>
-    <p>5</p>
-    <p>6</p>
-    <p>7</p>
-    <p>8</p>
-    <p>9</p>
-    <p>10</p>
-    <p>11</p>
-    <p>12</p>
-    <p>13</p>
+<section id="slide01">
+    <h1>Weave<br/><em>Visualizing Students' Progress Toward Their Degrees</em></h1>
+    <h2>Rick Osborne<br/>Program Manager, Web Design & Development</h2>
+</section>
+<section id="slide02">
+    
+</section>
+<section id="slide03">
+    
+</section>
+<section id="slide04">
+    
+</section>
+<section id="slide05">
+    
+</section>
+<section id="slide06">
+    
+</section>
+<section id="slide07">
+    
+</section>
+<section id="slide08">
+    
+</section>
+<section id="slide09">
+    
+</section>
+<section id="slide10">
+    
+</section>
+<section id="slide11">
+    
+</section>
+<section id="slide12">
+    
+</section>
+<section id="slide13">
+    
+</section>
+<section id="slide14">
+    
+</section>
+<section id="slide15">
+    
+</section>
+<section id="slide16">
+    
+</section>
+<section id="slide17">
+    
+</section>
+<section id="slide18">
+    
+</section>
+<section id="slide19">
+    
+</section>
+<section id="slide20">
+    
 </section>
 </article>
 <footer>
@@ -180,7 +241,9 @@ article {
         con.log("scaleFactor:", scaleFactor);
         clearRules();
         addRule("article", "font-size: " + scaleFactor + "%");
-        addRule("article", "padding: 0.75em " + paddingWidth + "%");
+        addRule("article", "padding: 0.25em " + paddingWidth + "%");
+        addRule("section h1", "padding: 0.25em " + paddingWidth + "%");
+        addRule("section h2", "padding: 0.25em " + paddingWidth + "%");
     };
     var startFixTextSize = function () {
         if (startFixTextSizeTimer) {
